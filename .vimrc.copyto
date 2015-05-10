@@ -159,4 +159,5 @@ set fileencodings=utf-8,cp949
 set guifont=Ubuntu\ Mono\ for\ Powerline:h12:cANSI
 set guifontwide=NanumGothicCoding:h12:cDEFAULT
 
-cd c:\_GoogleDrive\
+"cd c:\_GoogleDrive\
+cd c:\Users\utylee\00-projects
