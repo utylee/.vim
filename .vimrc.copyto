@@ -28,6 +28,8 @@ function MyDiff()
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
+
+set runtimepath=~/.vim
 "==================================================================
 "set nocompatible
 "filetype off
@@ -64,30 +66,31 @@ endfunction
 
 "==================================================================
 
+execute pathogen#infect()
 
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim' 
-
-
-" The bundles you install will be listed here
-
-filetype plugin indent on
-
-" The rest of your config follows here
-
-
+"set nocompatible
+"filetype off
+"
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
+"
+"" let Vundle manage Vundle
+"" required! 
+"Bundle 'gmarik/vundle'
+"Bundle 'bling/vim-airline'
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'davidhalter/jedi-vim'
+"Bundle 'scrooloose/nerdtree'
+"Bundle 'kien/ctrlp.vim' 
+"
+"
+"" The bundles you install will be listed here
+"
+"filetype plugin indent on
+"
+"" The rest of your config follows here
+"
+"
 set laststatus=2
 let g:airline_powerline_fonts = 1
 "let g:Powerline_symbols = 'fancy'
@@ -128,6 +131,27 @@ map <c-h> <c-w>h
 map <c-l> <c-w>l
 "map <C-T> :tabnew<CR>:wincmd w<CR>
 
+" Setup some default ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+\}
+
+" Use the nearest .git directory as the cwd
+" This makes a lot of sense if you are working on a project that is in version
+" control. It also supports works with .svn, .hg, .bzr.
+let g:ctrlp_working_path_mode = 'r'
+
+" Use a leader instead of the actual named binding
+nmap <leader>f :CtrlP<cr>
+
+" Easy bindings for its various modes
+nmap <leader>b :CtrlPBuffer<cr>
+nmap <leader>m :CtrlPMixed<cr>
+"nmap <leader>bs :CtrlPMRU<cr>
+
+
+
 "d로 삭제시에 레지스터로 복사되는 것을 금지합니다
 "noremap d "_d
 "noremap dd "_dd
@@ -136,7 +160,26 @@ map <c-l> <c-w>l
 
 "colorscheme molokai "oreilly jellybeans sweyla1 
 colorscheme oreilly "oreilly jellybeans sweyla1 
+"colors oreilly "oreilly jellybeans sweyla1 
 
 "autocmd BufNewFile,BufRead *.qml so c:\vim\vim74\ftplugin\qml.vim
 autocmd BufNewFile,BufRead *.qml setf qml 
 
+
+set langmenu=utf8
+lang mes en_US 
+"set langmenu=en_US.UTF-8
+set tabstop=4
+"cd c:\_GoogleDrive\__시스템트레이딩\
+set encoding=utf8
+set fileencodings=utf-8,cp949
+"set langmenu=cp949
+"set guifont=나눔고딕코딩:h12:cHANGEUL
+"set guifontwide=나눔고딕코딩:h12:cHANGEUL
+"set guifont=Lucida\ Console:h11:cDEFAULT
+"set guifont=Consolas:h10.15:cDEFAULT
+"set guifont=Consolas:h10.2:cANSI
+set guifont=Ubuntu\ Mono\ for\ Powerline:h12:cANSI
+set guifontwide=NanumGothicCoding:h12:cDEFAULT
+
+cd c:\_GoogleDrive\
