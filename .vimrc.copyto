@@ -29,7 +29,7 @@ function MyDiff()
 endfunction
 
 
-set runtimepath=~/.vim
+"set runtimepath=~/.vim
 "==================================================================
 "set nocompatible
 "filetype off
