@@ -4,7 +4,7 @@
 ## How to install
  As shown below (In the $HOME (by :echo $HOME):
 
-1) If on Windows: 
+1) On Windows: 
 
  	git clone  --recursive https://github.com/utylee/.vim vimfiles 
 
