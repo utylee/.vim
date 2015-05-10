@@ -3,4 +3,5 @@
 
 ## How to install
  As shown below :
+
  	git clone  --recursive https://github.com/utylee/.vim .
