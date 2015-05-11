@@ -78,6 +78,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+set noundofile
 set number
 set cul
 set ignorecase
@@ -160,4 +161,5 @@ set guifont=Ubuntu\ Mono\ for\ Powerline:h12:cANSI
 set guifontwide=NanumGothicCoding:h12:cDEFAULT
 
 "cd c:\_GoogleDrive\
-cd c:\Users\utylee\00-projects
+"cd c:\Users\utylee\00-projects
+cd c:\Users\seoru\00-projects
