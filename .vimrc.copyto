@@ -28,7 +28,6 @@ function MyDiff()
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
-
 "set runtimepath=~/.vim
 "==================================================================
 "set nocompatible
@@ -68,6 +67,9 @@ endfunction
 
 execute pathogen#infect()
 
+filetype plugin indent on
+syntax on
+
 set laststatus=2
 let g:airline_powerline_fonts = 1
 "let g:Powerline_symbols = 'fancy'
@@ -102,6 +104,9 @@ map <F2> :NERDTreeToggle<CR>
 map <F1> :e $myvimrc<CR>
 map <A-3> :tabnext<CR>
 map <A-4> :tabprevious<CR>
+map <F3> :cn<CR>
+map <F4> :cp<CR>
+"ex) :ccl<CR>       "Close the search result windows
 
 map <c-j> <c-w>j
 map <c-k> <c-w>k
