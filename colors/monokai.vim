@@ -14,7 +14,18 @@ let g:colors_name = "monokai"
 "statement = #f92672 = hotpink
 "Boolean = #ae81ff = purple
 "Identifier = #66d9ef = skyblue
-"
+"  = #FD971F = orange
+
+"utylee's addition
+hi Orange ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
+hi Skyblue ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
+hi Hotpink ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
+hi Green ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
+hi Purple ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
+hi Lightgrey ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
+hi Darkgrey ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
+hi Yellow ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
+"original 
 
 hi Cursor ctermfg=235 ctermbg=231 cterm=NONE guifg=#272822 guibg=#f8f8f0 gui=NONE
 hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#49483e gui=NONE
