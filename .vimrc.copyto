@@ -134,16 +134,19 @@ nmap <leader>m :CtrlPMixed<cr>
 "nmap <leader>bs :CtrlPMRU<cr>
 
 
-
 "d로 삭제시에 레지스터로 복사되는 것을 금지합니다
 "noremap d "_d
 "noremap dd "_dd
 "noremap p "0p
 
-
 "colorscheme molokai "oreilly jellybeans sweyla1 
-colorscheme oreilly "oreilly jellybeans sweyla1 
-"colors oreilly "oreilly jellybeans sweyla1 
+colorscheme monokai "oreilly jellybeans sweyla1 
+"colorscheme oreilly "oreilly jellybeans sweyla1 
+
+"let python_no_builtin_highlight = 1  
+let g:molokai_original = 1
+"set air-line theme {dark, molokai, ...}
+let g:airline_theme='dark'
 
 "autocmd BufNewFile,BufRead *.qml so c:\vim\vim74\ftplugin\qml.vim
 autocmd BufNewFile,BufRead *.qml setf qml 

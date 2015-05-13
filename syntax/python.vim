@@ -76,12 +76,13 @@ set cpo&vim
 "syn keyword pythonStatement	False, None, True
 syn keyword pythonBoolean	False None True self
 syn keyword pythonStatement	as assert break continue del exec global
-syn keyword pythonStatement	lambda nonlocal pass print return with yield
+syn keyword pythonStatement	lambda nonlocal print return with yield in
 syn keyword pythonStatement	def nextgroup=pythonFunction skipwhite
-syn keyword pythonStatement	class nextgroup=pythonClass skipwhite
+syn keyword pythonCStatement	class nextgroup=pythonClass skipwhite
 syn keyword pythonConditional	elif else if
 syn keyword pythonRepeat	for while
-syn keyword pythonOperator	and in is not or
+syn keyword pythonOperator	and is not or 
+syn keyword pythonPass		pass
 syn keyword pythonException	except finally raise try
 syn keyword pythonInclude	from import nextgroup=pythonModule skipwhite
 "syn keyword pythonFrom		from nextgroup=pythonFromModule skipwhite
@@ -286,28 +287,31 @@ if version >= 508 || !exists("did_python_syn_inits")
 
   " The default highlight links.  Can be overridden later.
   HiLink pythonStatement	Statement
+  HiLink pythonCstatement	Skyblue
   HiLink pythonBoolean		Boolean
   HiLink pythonConditional	Conditional
   HiLink pythonLineString	Special
   HiLink pythonRepeat		Repeat
-  HiLink pythonOperator		Operator
+  "HiLink pythonOperator		Operator
+  HiLink pythonPass		OrangeItalic
+  HiLink pythonOperator		Orange
   HiLink pythonException	Exception
   HiLink pythonInclude		Normal
   "HiLink pythonDecorator	Define
   HiLink pythonDecorator	PythonDecorator
   HiLink pythonDecoFunction	Normal
   HiLink pythonFunction		Function
-  HiLink pythonClass		Function
-  HiLink pythonImportModule	SpecialKey
-  HiLink pythonFromModule	SpecialKey
-  HiLink pythonModule		SpecialKey
+  HiLink pythonClass		Skyblue
+  HiLink pythonImportModule	Skyblue
+  HiLink pythonFromModule	Skyblue
+  HiLink pythonModule		Skyblue
   HiLink pythonImport		Normal
   HiLink pythonFrom		Normal
   HiLink pythonFromImportModule	Boolean
   HiLink pythonComment		Comment
   HiLink pythonTodo		Todo
   HiLink pythonString		String
-  HiLink pythonDocString	Identifier
+  HiLink pythonDocString	YellowItalic
   HiLink pythonRawString	String
   HiLink pythonEscape		Escape
   HiLink pythonComma		Normal

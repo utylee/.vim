@@ -15,18 +15,22 @@ let g:colors_name = "monokai"
 "Boolean = #ae81ff = purple
 "Identifier = #66d9ef = skyblue
 "  = #FD971F = orange
-
+"#75715e = lightgrey
+"#e6db74 = yellow
+"
 "utylee's addition
 hi Orange ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
-hi Skyblue ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
-hi Hotpink ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
-hi Green ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
-hi Purple ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
-hi Lightgrey ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
+hi OrangeItalic ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=italic
+hi Skyblue ctermfg=141 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
+hi Hotpink ctermfg=141 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
+hi Green ctermfg=141 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
+hi Purple ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
+hi Lightgrey ctermfg=141 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
 hi Darkgrey ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
-hi Yellow ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
-"original 
+hi Yellow ctermfg=141 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
+hi YellowItalic ctermfg=141 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=italic
 
+"original 
 hi Cursor ctermfg=235 ctermbg=231 cterm=NONE guifg=#272822 guibg=#f8f8f0 gui=NONE
 hi Visual ctermfg=NONE ctermbg=59 cterm=NONE guifg=NONE guibg=#49483e gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
