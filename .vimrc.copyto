@@ -80,6 +80,9 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+"let g:jedi#auto_initialization = 1 
+"let g:jedi#squelch_py_warning = 1
+
 set noundofile
 set number
 set cul
@@ -123,7 +126,7 @@ let g:ctrlp_custom_ignore = {
 " Use the nearest .git directory as the cwd
 " This makes a lot of sense if you are working on a project that is in version
 " control. It also supports works with .svn, .hg, .bzr.
-let g:ctrlp_working_path_mode = 'r'
+"let g:ctrlp_working_path_mode = 'r'
 
 " Use a leader instead of the actual named binding
 nmap <leader>f :CtrlP<cr>
@@ -146,7 +149,7 @@ colorscheme monokai "oreilly jellybeans sweyla1
 "let python_no_builtin_highlight = 1  
 let g:molokai_original = 1
 "set air-line theme {dark, molokai, ...}
-let g:airline_theme='dark'
+let g:airline_theme='molokai'
 
 "autocmd BufNewFile,BufRead *.qml so c:\vim\vim74\ftplugin\qml.vim
 autocmd BufNewFile,BufRead *.qml setf qml 
