@@ -298,7 +298,8 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonException	Exception
   HiLink pythonInclude		Normal
   "HiLink pythonDecorator	Define
-  HiLink pythonDecorator	PythonDecorator
+  "HiLink pythonDecorator	PythonDecorator
+  HiLink pythonDecorator	Hotpink
   HiLink pythonDecoFunction	Normal
   HiLink pythonFunction		Function
   HiLink pythonClass		Skyblue
