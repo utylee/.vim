@@ -90,7 +90,7 @@ syn keyword pythonInclude	from import nextgroup=pythonModule skipwhite
 
 " Decorators (new in Python 2.4)
 "syn match   pythonDecorator	"@" display nextgroup=pythonFunction skipwhite
-syn match   pythonDecorator	"@\w*" display nextgroup=pythonDecoFunction 
+syn match   pythonDecorator	"@\w*\%(\.\%(\w\)*\)*" display nextgroup=pythonDecoFunction 
 " The zero-length non-grouping match before the function name is
 " extremely important in pythonFunction.  Without it, everything is
 " interpreted as a function inside the contained environment of
