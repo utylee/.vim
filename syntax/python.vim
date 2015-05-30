@@ -76,7 +76,7 @@ set cpo&vim
 "syn keyword pythonStatement	False, None, True
 syn keyword pythonBoolean	False None True self
 syn keyword pythonStatement	as assert break continue del exec global
-syn keyword pythonStatement	lambda nonlocal print return with yield in
+syn keyword pythonStatement	lambda nonlocal print return with in
 syn keyword pythonStatement	def nextgroup=pythonFunction skipwhite
 syn keyword pythonCStatement	class nextgroup=pythonClass skipwhite
 syn keyword pythonConditional	elif else if
@@ -97,6 +97,8 @@ syn match   pythonDecorator	"@\w*" display nextgroup=pythonDecoFunction
 " doctests.
 " A dot must be allowed because of @MyClass.myfunc decorators.
 syn match   pythonComma         "," 
+
+syn match   pythonYieldFrom	"yield \%(from\)*"
 
 syn match   pythonFunction
       \ "\%(\%(def\s\)\s*\)\@<=\h\%(\w\|\.\)*" contained
@@ -287,6 +289,7 @@ if version >= 508 || !exists("did_python_syn_inits")
 
   " The default highlight links.  Can be overridden later.
   HiLink pythonStatement	Statement
+  HiLink pythonYieldFrom	Hotpink
   HiLink pythonCstatement	Skyblue
   HiLink pythonBoolean		Boolean
   HiLink pythonConditional	Conditional
