@@ -91,6 +91,13 @@ set shiftwidth=4
 set softtabstop=4
 set nobackup
 set noswapfile
+"no equalalways or equalalways --> split 화면에서 사이즈 유즈 관련 세팅
+set noea 
+
+" 현재 파일의 디렉토리로 이동
+set autochdir
+" 만약 플러긴에서 문제가 생긴다면 아래대안을 사용할 것
+"nnoremap ,cd :cd %:p:h<CR> 
 
 if has("gui_running")
 	set lines=70
@@ -141,8 +148,8 @@ nmap <leader>m :CtrlPMixed<cr>
 
 
 " Split size change
-nmap <leader>- :resize -3<cr>
-nmap <leader>= :resize +3<cr>
+nmap <leader>- :resize -5<cr>
+nmap <leader>= :resize +5<cr>
 
 "d로 삭제시에 레지스터로 복사되는 것을 금지합니다
 "noremap d "_d
