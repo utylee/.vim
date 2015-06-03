@@ -120,8 +120,10 @@ map <c-l> <c-w>l
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|avi|mkv|mov|mp4|wma|xlsx|mp3|ini|doc|docx|un|bak)$',
 \}
+
+
 
 " Use the nearest .git directory as the cwd
 " This makes a lot of sense if you are working on a project that is in version
@@ -133,9 +135,14 @@ nmap <leader>f :CtrlP<cr>
 
 " Easy bindings for its various modes
 nmap <leader>b :CtrlPBuffer<cr>
+nmap <leader>t :CtrlPMRU<cr>
 nmap <leader>m :CtrlPMixed<cr>
 "nmap <leader>bs :CtrlPMRU<cr>
 
+
+" Split size change
+nmap <leader>- :resize -3<cr>
+nmap <leader>= :resize +3<cr>
 
 "d로 삭제시에 레지스터로 복사되는 것을 금지합니다
 "noremap d "_d
@@ -173,4 +180,4 @@ set guifontwide=NanumGothicCoding:h12:cDEFAULT
 
 "cd c:\_GoogleDrive\
 "cd c:\Users\utylee\00-projects
-cd c:\Users\seoru\00-projects
+cd c:\Users\seoru\00-projects\00-python
