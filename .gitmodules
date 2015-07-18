@@ -22,3 +22,6 @@
 [submodule "bundle/vim-qml"]
 	path = bundle/vim-qml
 	url = https://github.com/peterhoeg/vim-qml.git
+[submodule "bundle/vim-simple-todo"]
+	path = bundle/vim-simple-todo
+	url = https://github.com/vitalk/vim-simple-todo.git
