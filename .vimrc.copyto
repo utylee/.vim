@@ -145,7 +145,7 @@ nmap <leader>b :CtrlPBuffer<cr>
 nmap <leader>t :CtrlPMRU<cr>
 nmap <leader>m :CtrlPMixed<cr>
 "nmap <leader>bs :CtrlPMRU<cr>
-
+let g:ctrlp_match_window = 'max:12'
 
 " Split size change
 nmap <leader>- :resize -5<cr>
