@@ -25,3 +25,6 @@
 [submodule "bundle/vim-simple-todo"]
 	path = bundle/vim-simple-todo
 	url = https://github.com/vitalk/vim-simple-todo.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
