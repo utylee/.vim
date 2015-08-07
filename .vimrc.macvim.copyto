@@ -70,8 +70,26 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 
+"let g:virtualenv_directory = '/home/utylee/00-Projects/venv-tyTrader'
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#virtualenv#enabled = 1
+"let g:airline_section_a = airline#sections#create(['mode', %{airline#extensions#branch#get_head()}''branch'])
+
+function! AirlineWrapper(ext)
+	let head = airline#extensions#branch#head()
+	return empty(head) ? '' : printf(' %s', airline#extensions#branch#get_head())
+endfunction
+
+
+let g:airline_section_a = airline#section#create(['mode', ' ', '%{airline#extensions#branch#get_head()}'])
+"let g:airline_section_a = airline#section#create(['mode', '%{AirlineWrapper()}'])
+"let g:airline_section_b = airline#section#create([g:airline_symbols.branch, ' ', '%{fugitive#head()}', ' ', ' %{virtualenv#statusline()}'])
+"let g:airline_section_b = airline#section#create(['%{airline#extensions#branch#get_head()}', ' %{virtualenv#statusline()}'])
+let g:airline_section_b = airline#section#create(['%{virtualenv#statusline()}'])
+"let g:airline_section_b = airline#section#create(['branch'])
+"let g:airline_section_b = ['branch']
+"let g:virtualenv_stl_format = '[%n]'
 "let g:Powerline_symbols = 'fancy'
 
 " Enable the list of buffers
@@ -79,6 +97,12 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+"function! MyOverride(...)
+"	call a:l.add_section('StatusLine', 'all')
+"	return l
+"endfunction
+"call airline#add_statusline_func('MyOverride')
 
 "let g:jedi#auto_initialization = 1 
 "let g:jedi#squelch_py_warning = 1
@@ -99,19 +123,24 @@ set autochdir
 " 만약 플러긴에서 문제가 생긴다면 아래대안을 사용할 것
 "nnoremap ,cd :cd %:p:h<CR> 
 
-"if has("gui_running")
-"	set lines=55
+if has("gui_running")
+	"set lines=55
 "	set columns=120
 "	au GUIEnter * winpos 300 0
-"endif
+"
+	"set guioptions -=T
+	"set guioptions -=m
+	set fullscreen
+endif
 
-set guioptions -=T
-set guioptions -=m
 set noshellslash
 map <F5> : !python3 %<CR>
-nmap <leader>5 :!python3 %<CR>
+nmap <leader>e :!python3 %<CR>
+nmap <leader>` :set fullscreen<CR>
+nmap <leader>q :bd<CR>
 map <F7> :NERDTreeTabsToggle<CR>
 map <F2> :NERDTreeToggle<CR>
+nmap <leader>2 :NERDTreeToggle<CR>
 map <F1> :e $MYVIMRC<CR>
 nmap <leader>1 :e $MYVIMRC<CR>
 map <A-3> :tabnext<CR>
@@ -187,7 +216,7 @@ set fileencodings=utf-8
 "set guifont=Consolas:h10.2:cANSI
 "set guifont=Ubuntu\ Mono\ for\ Powerline:h15:cANSI
 "set guifont=Ubuntu\ Mono:h15:cANSI
-set guifont=Ubuntu\ Mono:h18
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18
 set guifontwide=NanumGothicCoding:h23
 "set guifontwide=NanumGothicCoding:h15:cDEFAULT
 "set guifontwide=Ubuntu:h15:cDEFAULT
