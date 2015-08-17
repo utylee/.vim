@@ -135,9 +135,10 @@ endif
 
 set noshellslash
 map <F5> : !python3 %<CR>
-nmap <leader>e :!python3 %<CR>
+"nmap <leader>e :!python3 %<CR>
+nmap <leader>e :!python3 '%:p'<CR>
 nmap <leader>` :set fullscreen<CR>
-nmap <leader>q :bd<CR>
+nmap <leader>q :bd!<CR>
 map <F7> :NERDTreeTabsToggle<CR>
 map <F2> :NERDTreeToggle<CR>
 nmap <leader>2 :NERDTreeToggle<CR>
@@ -216,7 +217,7 @@ set fileencodings=utf-8
 "set guifont=Consolas:h10.2:cANSI
 "set guifont=Ubuntu\ Mono\ for\ Powerline:h15:cANSI
 "set guifont=Ubuntu\ Mono:h15:cANSI
-set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18.3
 set guifontwide=NanumGothicCoding:h23
 "set guifontwide=NanumGothicCoding:h15:cDEFAULT
 "set guifontwide=Ubuntu:h15:cDEFAULT
