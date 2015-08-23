@@ -208,7 +208,7 @@ set tabstop=4
 "cd c:\_GoogleDrive\__시스템트레이딩\
 set encoding=utf8
 "set fileencodings=utf-8,cp949
-set fileencodings=utf-8
+set fileencodings=utf-8,cp949
 "set langmenu=cp949
 "set guifont=나눔고딕코딩:h12:cHANGEUL
 "set guifontwide=나눔고딕코딩:h12:cHANGEUL
@@ -217,8 +217,10 @@ set fileencodings=utf-8
 "set guifont=Consolas:h10.2:cANSI
 "set guifont=Ubuntu\ Mono\ for\ Powerline:h15:cANSI
 "set guifont=Ubuntu\ Mono:h15:cANSI
-set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18.3
-set guifontwide=NanumGothicCoding:h23
+"set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18.3
+"set guifontwide=NanumGothicCoding:h23
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:h19
+set guifontwide=NanumGothicCoding:h24
 "set guifontwide=NanumGothicCoding:h15:cDEFAULT
 "set guifontwide=Ubuntu:h15:cDEFAULT
 
