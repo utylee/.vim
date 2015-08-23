@@ -34,3 +34,6 @@
 [submodule "bundle/vim-virtualenv"]
 	path = bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
+[submodule "bundle/Conque-Shell"]
+	path = bundle/Conque-Shell
+	url = https://github.com/oplatek/Conque-Shell.git
