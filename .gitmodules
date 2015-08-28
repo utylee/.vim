@@ -37,3 +37,6 @@
 [submodule "bundle/Conque-Shell"]
 	path = bundle/Conque-Shell
 	url = https://github.com/oplatek/Conque-Shell.git
+[submodule "bundle/vim-tmux-navigator"]
+	path = bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
