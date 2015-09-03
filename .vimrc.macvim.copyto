@@ -2,11 +2,19 @@ set nocompatible
 "source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
+"set backspace=indent,eol,start
 
+"osx 터미널 상에서의 인서트모드 커서를 변경합니다.
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-set foldmethod=marker
+"osx + tmux 상에서의 인서트모드 커서를 변경합니다.
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
 let &t_8f="\e[38;2;%ld;%ld;%ldm"
 let &t_8b="\e[48;2;%ld;%ld;%ldm"
+
 set guicolors
 "set t_Co=256
 "set t_Co=16
@@ -122,7 +130,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 set noundofile
 set number
 set cul
-set ignorecase
+"set ignorecase
 set shiftwidth=4
 set softtabstop=4
 set nobackup
