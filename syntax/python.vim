@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	Python
 " Maintainer:	Neil Schemenauer <nas@python.ca>
-" Last Change:	2013 Feb 26
+" Last Change:	2014 Jul 16
 " Credits:	Zvezdan Petkovic <zpetkovic@acm.org>
 "		Neil Schemenauer <nas@python.ca>
 "		Dmitry Vasiliev
@@ -71,51 +71,25 @@ set cpo&vim
 " - 'print' is a built-in in Python 3.0 and will be highlighted as
 "   built-in below (use 'from __future__ import print_function' in 2.6)
 "
-
-
-"syn keyword pythonStatement	False, None, True
-syn keyword pythonBoolean	False None True self
+syn keyword pythonStatement	False, None, True
 syn keyword pythonStatement	as assert break continue del exec global
-syn keyword pythonStatement	lambda nonlocal print return with in
-syn keyword pythonStatement	def nextgroup=pythonFunction skipwhite
-syn keyword pythonCStatement	class nextgroup=pythonClass skipwhite
+syn keyword pythonStatement	lambda nonlocal pass print return with yield
+syn keyword pythonStatement	class def nextgroup=pythonFunction skipwhite
 syn keyword pythonConditional	elif else if
 syn keyword pythonRepeat	for while
-syn keyword pythonOperator	and is not or 
-syn keyword pythonPass		pass
+syn keyword pythonOperator	and in is not or
 syn keyword pythonException	except finally raise try
-syn keyword pythonInclude	from import nextgroup=pythonModule skipwhite
-"syn keyword pythonFrom		from nextgroup=pythonFromModule skipwhite
-"syn keyword pythonImport	import nextgroup=pythonImportModule skipwhite
+syn keyword pythonInclude	from import
 
 " Decorators (new in Python 2.4)
-"syn match   pythonDecorator	"@" display nextgroup=pythonFunction skipwhite
-syn match   pythonDecorator	"@\w*\%(\.\%(\w\)*\)*" display nextgroup=pythonDecoFunction 
+syn match   pythonDecorator	"@" display nextgroup=pythonFunction skipwhite
 " The zero-length non-grouping match before the function name is
 " extremely important in pythonFunction.  Without it, everything is
 " interpreted as a function inside the contained environment of
 " doctests.
 " A dot must be allowed because of @MyClass.myfunc decorators.
-syn match   pythonComma         "," 
-
-syn match   pythonYieldFrom	"yield \%(from\)*"
-
 syn match   pythonFunction
-      \ "\%(\%(def\s\)\s*\)\@<=\h\%(\w\|\.\)*" contained
-
-syn match   pythonClass
-      \ "\%(\%(class\s\)\s*\)\@<=\h\%(\w\|\.\)*" contained
-
-
-syn match   pythonModule
-      \ "\%(\%(import\s\|from\s\)\s*\)\@<=\h\%(\w\|\.\|\,\|\s\)*" contained contains = pythonComma, pythonModule, pythonInclude
-"      \ "\%(\%(import\s\|from\s\)\s*\)\@<=\h\%(\w\|\.\|\,\|\s\)*" contains=pythonComma, pythonModule, pythonInclude
-"syn match   pythonImportModule
-"      \ "\%(\%(import\s\)\s*\)\@<=\h\%(\w\|\.\|\,\|\s\)*" contains=pythonComma
-"syn match   pythonFromModule
-"      \ "\%(\%(from\s\)\s*\)\@<=\h\%(\w\|\.\|\,\|\s\)*" contains=pythonComma,pythonImport,pythonFromImportModule
-
-
+      \ "\%(\%(def\s\|class\s\|@\)\s*\)\@<=\h\%(\w\|\.\)*" contained
 
 syn match   pythonComment	"#.*$" contains=pythonTodo,@Spell
 syn keyword pythonTodo		FIXME NOTE NOTES TODO XXX contained
@@ -124,13 +98,13 @@ syn keyword pythonTodo		FIXME NOTE NOTES TODO XXX contained
 syn region  pythonString
       \ start=+[uU]\=\z(['"]\)+ end="\z1" skip="\\\\\|\\\z1"
       \ contains=pythonEscape,@Spell
-syn region  pythonDocString
+syn region  pythonString
       \ start=+[uU]\=\z('''\|"""\)+ end="\z1" keepend
       \ contains=pythonEscape,pythonSpaceError,pythonDoctest,@Spell
 syn region  pythonRawString
       \ start=+[uU]\=[rR]\z(['"]\)+ end="\z1" skip="\\\\\|\\\z1"
       \ contains=@Spell
-syn region  pythonDocString
+syn region  pythonRawString
       \ start=+[uU]\=[rR]\z('''\|"""\)+ end="\z1" keepend
       \ contains=pythonSpaceError,pythonDoctest,@Spell
 
@@ -139,7 +113,7 @@ syn match   pythonEscape	"\\\o\{1,3}" contained
 syn match   pythonEscape	"\\x\x\{2}" contained
 syn match   pythonEscape	"\%(\\u\x\{4}\|\\U\x\{8}\)" contained
 " Python allows case-insensitive Unicode IDs: http://www.unicode.org/charts/
-syn match   pythonEscape	"\\N{\a\+\%(\s\a\+\)*}" contained
+syn match   pythonEscape	"\\N{.\{-}}" contained
 syn match   pythonEscape	"\\$"
 
 if exists("python_highlight_all")
@@ -199,6 +173,7 @@ if !exists("python_no_builtin_highlight")
   " built-in constants
   " 'False', 'True', and 'None' are also reserved words in Python 3.0
   syn keyword pythonBuiltin	False True None
+  "syn keyword Boolean		False True None
   syn keyword pythonBuiltin	NotImplemented Ellipsis __debug__
   " built-in functions
   syn keyword pythonBuiltin	abs all any bin bool chr classmethod
@@ -289,48 +264,26 @@ if version >= 508 || !exists("did_python_syn_inits")
 
   " The default highlight links.  Can be overridden later.
   HiLink pythonStatement	Statement
-  HiLink pythonYieldFrom	Hotpink
-  HiLink pythonCstatement	Skyblue
-  HiLink pythonBoolean		Boolean
   HiLink pythonConditional	Conditional
-  HiLink pythonLineString	Special
   HiLink pythonRepeat		Repeat
-  "HiLink pythonOperator		Operator
-  HiLink pythonPass		OrangeItalic
-  HiLink pythonOperator		Orange
+  HiLink pythonOperator		Operator
   HiLink pythonException	Exception
-  HiLink pythonInclude		Normal
-  "HiLink pythonDecorator	Define
-  "HiLink pythonDecorator	PythonDecorator
-  HiLink pythonDecorator	Hotpink
-  HiLink pythonDecoFunction	Normal
+  HiLink pythonInclude		Include
+  HiLink pythonDecorator	Define
   HiLink pythonFunction		Function
-  HiLink pythonClass		Skyblue
-  HiLink pythonImportModule	Skyblue
-  HiLink pythonFromModule	Skyblue
-  HiLink pythonModule		Skyblue
-  HiLink pythonImport		Normal
-  HiLink pythonFrom		Normal
-  HiLink pythonFromImportModule	Boolean
   HiLink pythonComment		Comment
   HiLink pythonTodo		Todo
   HiLink pythonString		String
-  HiLink pythonDocString	YellowItalic
   HiLink pythonRawString	String
-  HiLink pythonEscape		Escape
-  HiLink pythonComma		Normal
+  HiLink pythonEscape		Special
   if !exists("python_no_number_highlight")
     HiLink pythonNumber		Number
   endif
   if !exists("python_no_builtin_highlight")
-    "HiLink pythonBuiltin	Function
-    "HiLink pythonBuiltin	Statement
-    HiLink pythonBuiltin	Boolean
+    HiLink pythonBuiltin	Function
   endif
   if !exists("python_no_exception_highlight")
-
-    "HiLink pythonExceptions	Structure
-    HiLink pythonExceptions	Normal
+    HiLink pythonExceptions	Structure
   endif
   if exists("python_space_error_highlight")
     HiLink pythonSpaceError	Error

@@ -3,6 +3,18 @@ set nocompatible
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
 
+
+set foldmethod=marker
+let &t_8f="\e[38;2;%ld;%ld;%ldm"
+let &t_8b="\e[48;2;%ld;%ld;%ldm"
+set guicolors
+"set t_Co=256
+"set t_Co=16
+"let g:solarized_termcolors=256
+"let g:solarized_termcolors=16
+"let g:solarized_termtrans=0
+
+
 set diffexpr=MyDiff()
 function MyDiff()
   let opt = '-a --binary '
@@ -150,10 +162,10 @@ map <F3> :cn<CR>
 map <F4> :cp<CR>
 "ex) :ccl<CR>       "Close the search result windows
 
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-h> <c-w>h
-map <c-l> <c-w>l
+"map <c-j> <c-w>j
+"map <c-k> <c-w>k
+"map <c-h> <c-w>h
+"map <c-l> <c-w>l
 "map <C-T> :tabnew<CR>:wincmd w<CR>
 
 " Setup some default ignores
@@ -189,13 +201,24 @@ nmap <leader>= :resize +5<cr>
 "noremap p "0p
 
 "colorscheme molokai "oreilly jellybeans sweyla1 
-colorscheme monokai "oreilly jellybeans sweyla1 
 "colorscheme oreilly "oreilly jellybeans sweyla1 
+"colorscheme monokai "oreilly jellybeans sweyla1 
+"set background=dark
+"colorscheme solarized 
+colorscheme solarized_sd_utylee
 
 "let python_no_builtin_highlight = 1  
-let g:molokai_original = 1
+"let g:molokai_original = 1
+
 "set air-line theme {dark, molokai, ...}
 let g:airline_theme='molokai'
+"let g:airline_theme='solarized'
+"let g:airline_theme='dark'
+"let g:airline_theme='tomorrow'
+"let g:airline_theme='jellybeans'
+
+
+let g:jedi#completions_command = "<C-N>"
 
 "autocmd BufNewFile,BufRead *.qml so c:\vim\vim74\ftplugin\qml.vim
 autocmd BufNewFile,BufRead *.qml setf qml 
@@ -220,6 +243,7 @@ set fileencodings=utf-8,cp949
 "set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18.3
 "set guifontwide=NanumGothicCoding:h23
 set guifont=Ubuntu\ Mono\ derivative\ Powerline:h19
+"set font=Ubuntu\ Mono\ derivative\ Powerline:h19
 set guifontwide=NanumGothicCoding:h24
 "set guifontwide=NanumGothicCoding:h15:cDEFAULT
 "set guifontwide=Ubuntu:h15:cDEFAULT
@@ -227,3 +251,6 @@ set guifontwide=NanumGothicCoding:h24
 "cd c:\_GoogleDrive\
 "cd c:\Users\utylee\00-projects
 "cd c:\Users\seoru\00-projects\00-python
+"
+"
+

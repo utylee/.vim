@@ -20,7 +20,8 @@ let g:colors_name = "monokai"
 "
 "utylee's addition
 hi Orange ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
-hi OrangeItalic ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=italic
+"hi OrangeItalic ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=italic
+hi OrangeItalic ctermfg=141 ctermbg=NONE cterm=italic guifg=#fd971f guibg=NONE gui=italic
 hi Skyblue ctermfg=141 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
 hi Hotpink ctermfg=141 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi Green ctermfg=141 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
@@ -28,7 +29,8 @@ hi Purple ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Lightgrey ctermfg=141 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
 hi Darkgrey ctermfg=141 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
 hi Yellow ctermfg=141 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
-hi YellowItalic ctermfg=141 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=italic
+"hi YellowItalic ctermfg=141 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=italic
+hi YellowItalic ctermfg=141 ctermbg=NONE cterm=italic guifg=#e6db74 guibg=NONE gui=italic
 
 "original 
 hi Cursor ctermfg=235 ctermbg=231 cterm=NONE guifg=#272822 guibg=#f8f8f0 gui=NONE
@@ -51,7 +53,7 @@ hi SignColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=N
 hi Normal ctermfg=231 ctermbg=235 cterm=NONE guifg=#f8f8f2 guibg=#272822 gui=NONE
 hi Boolean ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
-hi Comment ctermfg=242 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
+hi Comment ctermfg=242 ctermbg=NONE cterm=italic guifg=#75715e guibg=NONE gui=italic
 hi Conditional ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Define ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
@@ -63,7 +65,7 @@ hi ErrorMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=N
 hi WarningMsg ctermfg=231 ctermbg=197 cterm=NONE guifg=#f8f8f0 guibg=#f92672 gui=NONE
 hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi Function ctermfg=148 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
-hi Identifier ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
+hi Identifier ctermfg=81 ctermbg=NONE cterm=italic guifg=#66d9ef guibg=NONE gui=italic
 hi Keyword ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi Label ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
 hi NonText ctermfg=59 ctermbg=236 cterm=NONE guifg=#49483e guibg=#31322c gui=NONE
@@ -74,7 +76,7 @@ hi Special ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f2 guibg=NONE gui=NONE
 "hi SpecialKey ctermfg=59 ctermbg=237 cterm=NONE guifg=#66d9ef guibg=#3c3d37 gui=NONE
 hi SpecialKey ctermfg=59 ctermbg=237 cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
 hi Statement ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
-hi StorageClass ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=italic
+hi StorageClass ctermfg=81 ctermbg=NONE cterm=italic guifg=#66d9ef guibg=NONE gui=italic
 hi String ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
 hi Tag ctermfg=197 ctermbg=NONE cterm=NONE guifg=#f92672 guibg=NONE gui=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f2 guibg=NONE gui=bold
