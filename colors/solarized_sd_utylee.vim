@@ -65,7 +65,7 @@ hi CursorColumn guifg=NONE guibg=#073642 gui=NONE
 hi CursorLine guifg=NONE guibg=#073642 gui=NONE guisp=#93a1a1 cterm=NONE
 hi ColorColumn guifg=NONE guibg=#073642 gui=NONE
 hi Cursor guifg=NONE guibg=NONE gui=NONE,reverse
-hi lCursor guifg=NONE guibg=NONE gui=NONE,standout
+hi lCursor guifg=NONE guibg=NONE gui=NONE,standout 
 hi MatchParen guifg=#dc322f guibg=#586e75 gui=NONE,bold
 
 " License "{{{
