@@ -40,3 +40,6 @@
 [submodule "bundle/vim-tmux-navigator"]
 	path = bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "bundle/Gundo"]
+	path = bundle/Gundo
+	url = https://github.com/vim-scripts/Gundo.git
