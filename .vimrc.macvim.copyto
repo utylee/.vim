@@ -2,7 +2,11 @@ set nocompatible
 "source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
-"set backspace=indent,eol,start
+
+set backspace=indent,eol,start
+
+" bashrc 의 alias를 읽기 위한 설정입니다
+let $BASH_ENV = "~/.bashrc"
 
 "osx 터미널 상에서의 인서트모드 커서를 변경합니다.
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -23,30 +27,30 @@ set guicolors
 "let g:solarized_termtrans=0
 
 
-set diffexpr=MyDiff()
-function MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  let eq = ''
-  if $VIMRUNTIME =~ ' '
-    if &sh =~ '\<cmd'
-      let cmd = '""' . $VIMRUNTIME . '\diff"'
-      let eq = '"'
-    else
-      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-    endif
-  else
-    let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-endfunction
+"set diffexpr=MyDiff()
+"function MyDiff()
+  "let opt = '-a --binary '
+  "if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  "if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  "let arg1 = v:fname_in
+  "if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  "let arg2 = v:fname_new
+  "if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  "let arg3 = v:fname_out
+  "if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  "let eq = ''
+  "if $VIMRUNTIME =~ ' '
+    "if &sh =~ '\<cmd'
+      "let cmd = '""' . $VIMRUNTIME . '\diff"'
+      "let eq = '"'
+    "else
+      "let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    "endif
+  "else
+    "let cmd = $VIMRUNTIME . '\diff'
+  "endif
+  "silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+"endfunction
 
 "set runtimepath=~/.vim
 "==================================================================
@@ -85,6 +89,8 @@ endfunction
 
 "==================================================================
 
+"plugin 관리 플러그인. bundle/autoload 내에 pathogen clone 후 아래 구문만
+"추가하면 bundle 폴더내의 폴더로 그냥 쉽게 관리됨
 execute pathogen#infect()
 
 filetype plugin indent on
@@ -130,7 +136,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 set noundofile
 set number
 set cul
-"set ignorecase
+set ignorecase
 set shiftwidth=4
 set softtabstop=4
 set nobackup
@@ -154,13 +160,19 @@ if has("gui_running")
 endif
 
 set noshellslash
-map <F5> : !python3 %<CR>
+"map <F5> : !python3 %<CR>
 "nmap <leader>e :!python3 %<CR>
-nmap <leader>e :!python3 '%:p'<CR>
+"nmap <leader>e :!python3 '%:p'<CR>
+"nmap <leader>e :set shellcmdflag=-ic <CR> :!ts python '%'<CR> <CR> :set shellcmdflag=-c<CR>
+"nmap <leader>e :!ts python '%:p' 2>/dev/null<CR> <CR>
+nmap <leader>e :!ts python '%' 2>/dev/null<CR> <CR>
+"현재 행을 실행하는 커맨드인데 공백제거가 안돼 아직 제대로 되지 않습니다
+nmap <leader>w :exec '!ts python -c \"'getline('.')'\"'<CR>
 nmap <leader>` :set fullscreen<CR>
 nmap <leader>q :bd!<CR>
 map <F7> :NERDTreeTabsToggle<CR>
 map <F2> :NERDTreeToggle<CR>
+nnoremap <leader>5 :GundoToggle<CR>
 nmap <leader>2 :NERDTreeToggle<CR>
 map <F1> :e $MYVIMRC<CR>
 nmap <leader>1 :e $MYVIMRC<CR>
