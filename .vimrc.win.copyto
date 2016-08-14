@@ -165,6 +165,7 @@ nmap <leader>= :resize +5<cr>
 
 "colorscheme molokai "oreilly jellybeans sweyla1 
 colorscheme monokai "oreilly jellybeans sweyla1 
+colorscheme solarized_sd_utylee "oreilly jellybeans sweyla1 
 "colorscheme oreilly "oreilly jellybeans sweyla1 
 
 "let python_no_builtin_highlight = 1  
