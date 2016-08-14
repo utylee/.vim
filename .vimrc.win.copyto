@@ -94,6 +94,12 @@ set noswapfile
 "no equalalways or equalalways --> split 화면에서 사이즈 유즈 관련 세팅
 set noea 
 
+" 파이썬에서 자꾸 indent 에러 등의 호환 문제가 발생하여 추가합니다. tab을
+" 스페이스로 채워주는 명령입니다.
+" 매번 수동으로 적용은 :retab 을 실행하면 됩니다
+set expandtab
+
+
 " 현재 파일의 디렉토리로 이동
 set autochdir
 " 만약 플러긴에서 문제가 생긴다면 아래대안을 사용할 것
