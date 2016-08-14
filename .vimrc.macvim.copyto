@@ -141,6 +141,7 @@ set shiftwidth=4
 set softtabstop=4
 set nobackup
 set noswapfile
+set expandtab
 "no equalalways or equalalways --> split 화면에서 사이즈 유즈 관련 세팅
 set noea 
 
@@ -202,7 +203,8 @@ let g:ctrlp_custom_ignore = {
 "let g:ctrlp_working_path_mode = 'r'
 
 " Use a leader instead of the actual named binding
-nmap <leader>f :CtrlP<cr>
+" 자꾸 팅겨서 명령어 자체를 임시로 제거합니다
+"nmap <leader>f :CtrlP<cr>  
 
 " Easy bindings for its various modes
 nmap <leader>b :CtrlPBuffer<cr>
