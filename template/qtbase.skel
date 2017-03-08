@@ -1,0 +1,113 @@
+import sys
+import asyncio
+import time
+import socket
+
+from quamash import QEventLoop, QThreadExecutor
+
+from PyQt5.QtGui import QGuiApplication
+from PyQt5.QtQml import QQmlApplicationEngine, QJSValue
+from PyQt5.QtCore import QUrl, QObject, pyqtSlot
+# 이 라인이 없으면 Qt 이미지 로드 오류 어쩌고가 뜹니다
+from PyQt5.QtQuick import QQuickView, QQuickWindow
+
+app = QGuiApplication(sys.argv)
+loop = QEventLoop(app)
+engine = QQmlApplicationEngine()
+
+rsock, wsock = socket.socketpair()
+rsock2, wsock2 = socket.socketpair()
+
+asyncio.set_event_loop(loop)
+
+class Test():
+    def __init__(self):
+        pass
+
+    def onClicked(self):
+        ''' invoke 함수 실행'''
+        print('onClicked 호출됨 ^^')
+
+    def onLoad(self):
+        ''' invoke 함수 실행'''
+        print('onLoad 호출됨 ^^')
+
+    @asyncio.coroutine
+    def printInterval(self):
+        inittime = loop.time()
+        myRect = window.findChild(QObject, "myObject")
+        myButton = window.findChild(QObject, "myButton")
+        myRect.trigger.connect(self.onLoad)
+        myButton.trigger.connect(self.onClicked)
+
+        window.show()
+       
+class Service(QObject):
+    def __init__(self, loop, parent=None):
+        self.loop = loop
+        super().__init__(parent)
+        self.dummy = Dummy(self)
+        print(rsock)
+        print(self.loop)
+
+        # QEventLoop 즉, quamash를 통한 loop에서는add_reader를 할 때
+        # sock.fileno()를 통해야만 한다는 사실을 알게 되었습니다.
+        self.loop.add_reader(rsock.fileno(), self.dummy.reader)
+        self.loop.add_reader(rsock2.fileno(), self.dummy.reader2)
+
+    @asyncio.coroutine
+    def coro(self, future):
+        print('coro:in')
+        self.future = future
+        window = engine.rootObjects()[0]
+        myObject = window.findChild(QObject, "myObject")
+        myObject.funcSetResult()
+
+    @pyqtSlot()
+    def setResult(self):
+        print('Service.setResult()')
+        self.future.set_result('')
+            
+    @pyqtSlot()
+    def onButtonClicked2(self):
+        self.loop.call_soon(wsock2.send, b'x')
+
+    @pyqtSlot()
+    def onButtonClicked(self):
+
+        window = engine.rootObjects()[0]
+        ctx = engine.rootContext()
+        print(window)
+        children = ctx.findChildren(QObject)
+        print("children : {}".format(children))
+        c = 0
+        myObject = window.findChild(QObject, "myObject")
+        print("myObject: {}".format(myObject))
+        QJSValue(testjs).call()
+        self.loop.call_soon(wsock.send, b'x')
+
+    @pyqtSlot()
+    def onClicked(self):
+        asyncio.async(self.dummy.retFunc())
+        print('async execute')
+
+
+with loop:
+    try:
+        test = Test()
+        service = Service(loop)
+
+        # rootObjects 실행전 context를 선언/추가해줍니다.
+        ctx = engine.rootContext()
+        ctx.setContextProperty('Service', service)
+
+        engine.load("qml/tytrader.qml")
+        window = engine.rootObjects()[0]
+
+        loop.run_until_complete(test.printInterval())
+        loop.run_forever()
+    except:
+        pass
+
+
+
