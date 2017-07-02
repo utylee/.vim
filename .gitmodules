@@ -52,10 +52,6 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-markdown-preview"]
-	path = bundle/vim-markdown-preview
-	url = https://github.com/JamshedVesuna/vim-markdown-preview.git
-	branch = master
 [submodule "bundle/vim-markdown-extra-preview"]
 	path = bundle/vim-markdown-extra-preview
 	url = https://github.com/waylan/vim-markdown-extra-preview
