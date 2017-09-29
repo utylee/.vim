@@ -248,6 +248,7 @@ let g:airline_theme='raven'
 
 
 let g:jedi#completions_command = "<C-N>"
+let g:ConqueGdb_Leader = ','
 
 "autocmd BufNewFile,BufRead *.qml so c:\vim\vim74\ftplugin\qml.vim
 autocmd BufNewFile,BufRead *.qml setf qml 
