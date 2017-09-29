@@ -55,3 +55,9 @@
 [submodule "bundle/vim-markdown-extra-preview"]
 	path = bundle/vim-markdown-extra-preview
 	url = https://github.com/waylan/vim-markdown-extra-preview
+[submodule "bundle/vim-obsession"]
+	path = bundle/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git
+[submodule "bundle/Conque-GDB"]
+	path = bundle/Conque-GDB
+	url = https://github.com/vim-scripts/Conque-GDB.git
