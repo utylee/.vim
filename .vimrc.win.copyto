@@ -106,9 +106,9 @@ set autochdir
 "nnoremap ,cd :cd %:p:h<CR> 
 
 if has("gui_running")
-	set lines=70
-	set columns=179
-	au GUIEnter * winpos 450 0
+	set lines=48
+	set columns=114
+	au GUIEnter * winpos 500 50
 endif
 
 set guioptions -=T
@@ -176,7 +176,6 @@ let g:airline_theme='molokai'
 "autocmd BufNewFile,BufRead *.qml so c:\vim\vim74\ftplugin\qml.vim
 autocmd BufNewFile,BufRead *.qml setf qml 
 
-
 set langmenu=utf8
 lang mes en_US 
 "set langmenu=en_US.UTF-8
@@ -190,10 +189,16 @@ set fileencodings=utf-8,cp949
 "set guifont=Lucida\ Console:h11:cDEFAULT
 "set guifont=Consolas:h10.15:cDEFAULT
 "set guifont=Consolas:h10.2:cANSI
-set guifont=Ubuntu\ Mono\ for\ Powerline:h13:cANSI
-set guifontwide=NanumGothicCoding:h12:cDEFAULT
-set renderoptions=type:directx,gamma:1.0,contrast:0.2,level:1.0,geom:1,renmode:5,taamode:1
+"set guifont=D2Coding:h13:cANSI
+"set guifont=GohuFont:h14:cANSI
+set guifont=Input:h12:cANSI
+"set guifont=Imma2:h12:cDEFAULT
+"set guifont=Terminus:h13:cANSI
+set guifontwide=나눔고딕코딩:h13.8:cDEFAULT
+"set guifontwide=Inconsolata\ for\ Powerline:h14:cDEFAULT
+"set renderoptions=type:directx,gamma:1.0,contrast:0.2,level:1.0,geom:1,renmode:5,taamode:1
+set renderoptions=type:directx,gamma:1.25,contrast:0.25,level:0.75,geom:1,renmode:5,taamode:1
 "cd c:\_GoogleDrive\
 "cd c:\Users\utylee\00-projects
 "cd c:\Users\seoru\00-projects\00-python
-cd c:\Users\seoru\e\bin
+cd c:\Users\utylee\
