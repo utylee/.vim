@@ -6,7 +6,8 @@ set nocompatible
 set backspace=indent,eol,start
 
 " bashrc 의 alias를 읽기 위한 설정입니다
-let $BASH_ENV = "~/.bashrc"
+"let $BASH_ENV = "~/.bashrc"
+let $BASH_ENV = "~/.bash_functions"
 
 "osx 터미널 상에서의 인서트모드 커서를 변경합니다.
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -19,7 +20,9 @@ let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 let &t_8f="\e[38;2;%ld;%ld;%ldm"
 let &t_8b="\e[48;2;%ld;%ld;%ldm"
 
-set guicolors
+" vim 8.0에서 truecolor를 정식 지원하기 시작했고, 정식 설정명령이 생겼습니다
+"set guicolors
+set termguicolors
 "set t_Co=256
 "set t_Co=16
 "let g:solarized_termcolors=256
@@ -200,11 +203,12 @@ let g:ctrlp_custom_ignore = {
 " Use the nearest .git directory as the cwd
 " This makes a lot of sense if you are working on a project that is in version
 " control. It also supports works with .svn, .hg, .bzr.
-"let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_working_path_mode = 'r'
 
 " Use a leader instead of the actual named binding
 " 자꾸 팅겨서 명령어 자체를 임시로 제거합니다
 "nmap <leader>f :CtrlP<cr>  
+nmap <leader>f :CtrlPCurFile<cr>  
 
 " Easy bindings for its various modes
 nmap <leader>b :CtrlPBuffer<cr>
@@ -233,10 +237,13 @@ colorscheme solarized_sd_utylee
 "let g:molokai_original = 1
 
 "set air-line theme {dark, molokai, ...}
-let g:airline_theme='molokai'
+"let g:airline_theme='molokai'
+"let g:airline_theme='base16_atelierlakeside'
+let g:airline_theme='raven'
 "let g:airline_theme='solarized'
 "let g:airline_theme='dark'
 "let g:airline_theme='tomorrow'
+"let g:AirlineTheme='tomorrow'
 "let g:airline_theme='jellybeans'
 
 
@@ -244,7 +251,7 @@ let g:jedi#completions_command = "<C-N>"
 
 "autocmd BufNewFile,BufRead *.qml so c:\vim\vim74\ftplugin\qml.vim
 autocmd BufNewFile,BufRead *.qml setf qml 
-
+au BufNewFile *.py 0r ~/.vim/template/qtbase.skel | let IndentStyle = "py"
 
 set langmenu=utf8
 lang mes en_US 
@@ -264,9 +271,14 @@ set fileencodings=utf-8,cp949
 "set guifont=Ubuntu\ Mono:h15:cANSI
 "set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18.3
 "set guifontwide=NanumGothicCoding:h23
-set guifont=Ubuntu\ Mono\ derivative\ Powerline:h19
+
+"set guifont=Ubuntu\ Mono\ derivative\ Powerline:h19
+"set guifont=Menlo\ for\ Powerline:h19
+"set guifont=Menlo\ for\ Powerline
+"macOS 상에서 iTerm에서는 폰트설정을 따로해주므로 의미가 없는 것 같습니다
+set guifont=Input
 "set font=Ubuntu\ Mono\ derivative\ Powerline:h19
-set guifontwide=NanumGothicCoding:h24
+"set guifontwide=NanumGothicCoding:h24
 "set guifontwide=NanumGothicCoding:h15:cDEFAULT
 "set guifontwide=Ubuntu:h15:cDEFAULT
 
