@@ -64,3 +64,27 @@
 [submodule "bundle/vim-prosession"]
 	path = bundle/vim-prosession
 	url = https://github.com/dhruvasagar/vim-prosession.git
+[submodule "bundle/neocomplete.vim"]
+	path = bundle/neocomplete.vim
+	url = https://github.com/Shougo/neocomplete.vim
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.git
+[submodule "bundle/neoinclude.vim"]
+	path = bundle/neoinclude.vim
+	url = https://github.com/Shougo/neoinclude.vim.git
+[submodule "bundle/vim-clang"]
+	path = bundle/vim-clang
+	url = https://github.com/justmao945/vim-clang
+[submodule "bundle/clang_complete"]
+	path = bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete
+[submodule "bundle/vim-rooter"]
+	path = bundle/vim-rooter
+	url = https://github.com/airblade/vim-rooter
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "bundle/vim-vebugger"]
+	path = bundle/vim-vebugger
+	url = https://github.com/idanarye/vim-vebugger
