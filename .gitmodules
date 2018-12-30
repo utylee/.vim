@@ -85,3 +85,6 @@
 [submodule "bundle/vim-vebugger"]
 	path = bundle/vim-vebugger
 	url = https://github.com/idanarye/vim-vebugger
+[submodule "bundle/vim-arduino"]
+	path = bundle/vim-arduino
+	url = https://github.com/stevearc/vim-arduino
