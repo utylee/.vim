@@ -48,7 +48,7 @@
 	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
+	url = https://github.com/mattn/emmet-vim
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
