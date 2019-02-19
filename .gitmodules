@@ -1,6 +1,7 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+	ignore = dirty
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = http://github.com/scrooloose/nerdtree
@@ -13,6 +14,7 @@
 [submodule "bundle/vim-simple-todo"]
 	path = bundle/vim-simple-todo
 	url = https://github.com/vitalk/vim-simple-todo.git
+	ignore = dirty
 [submodule "bundle/vim-unimpaired"]
 	path = bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
@@ -32,6 +34,7 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim
+	ignore=dirty
 [submodule "bundle/vim-obsession"]
 	path = bundle/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
@@ -58,6 +61,7 @@
 [submodule "bundle/fzf.vim"]
 	path = bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+	ignore = dirty
 [submodule "bundle/vim-toml"]
 	path = bundle/vim-toml
 	url = https://github.com/cespare/vim-toml
