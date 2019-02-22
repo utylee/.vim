@@ -41,9 +41,6 @@
 [submodule "bundle/vim-prosession"]
 	path = bundle/vim-prosession
 	url = https://github.com/dhruvasagar/vim-prosession.git
-[submodule "bundle/neocomplete.vim"]
-	path = bundle/neocomplete.vim
-	url = https://github.com/Shougo/neocomplete.vim
 [submodule "bundle/vim-rooter"]
 	path = bundle/vim-rooter
 	url = https://github.com/airblade/vim-rooter
@@ -65,3 +62,12 @@
 [submodule "bundle/vim-toml"]
 	path = bundle/vim-toml
 	url = https://github.com/cespare/vim-toml
+[submodule "bundle/deoplete.nvim"]
+	path = bundle/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim
+[submodule "bundle/vim-hug-neovim-rpc"]
+	path = bundle/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc
+[submodule "bundle/nvim-yarp"]
+	path = bundle/nvim-yarp
+	url = https://github.com/roxma/nvim-yarp
