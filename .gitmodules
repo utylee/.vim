@@ -62,6 +62,7 @@
 [submodule "bundle/vim-toml"]
 	path = bundle/vim-toml
 	url = https://github.com/cespare/vim-toml
+<<<<<<< HEAD
 [submodule "bundle/deoplete.nvim"]
 	path = bundle/deoplete.nvim
 	url = https://github.com/Shougo/deoplete.nvim
@@ -71,3 +72,6 @@
 [submodule "bundle/nvim-yarp"]
 	path = bundle/nvim-yarp
 	url = https://github.com/roxma/nvim-yarp
+[submodule "bundle/rust.vim"]
+	path = bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
