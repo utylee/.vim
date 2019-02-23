@@ -101,3 +101,9 @@
 [submodule "bundle/LanguageClient-neovim"]
 	path = bundle/LanguageClient-neovim
 	url = https://github.com/autozimu/LanguageClient-neovim
+[submodule "bundle/ncm2-tern"]
+	path = bundle/ncm2-tern
+	url = https://github.com/ncm2/ncm2-tern
+[submodule "bundle/ncm2-html-subscope"]
+	path = bundle/ncm2-html-subscope
+	url = https://github.com/ncm2/ncm2-html-subscope
