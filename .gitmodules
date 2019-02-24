@@ -74,9 +74,11 @@
 [submodule "bundle/ncm2"]
 	path = bundle/ncm2
 	url = https://github.com/ncm2/ncm2
+	ignore=dirty
 [submodule "bundle/ncm2-path"]
 	path = bundle/ncm2-path
 	url = https://github.com/ncm2/ncm2-path
+	ignore=dirty
 [submodule "bundle/ncm2-tagprefix"]
 	path = bundle/ncm2-tagprefix
 	url = https://github.com/ncm2/ncm2-tagprefix
@@ -86,30 +88,32 @@
 [submodule "bundle/ncm2-otherbuf"]
 	path = bundle/ncm2-otherbuf
 	url = https://github.com/fgrsnau/ncm2-otherbuf
+	ignore=dirty
 [submodule "bundle/vim-lsp"]
 	path = bundle/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp
 [submodule "bundle/ncm2-vim-lsp"]
 	path = bundle/ncm2-vim-lsp
 	url = https://github.com/ncm2/ncm2-vim-lsp
-[submodule "bundle/LanguageClient-neovim"]
-	path = bundle/LanguageClient-neovim
-	url = https://github.com/autozimu/LanguageClient-neovim
 [submodule "bundle/ncm2-tern"]
 	path = bundle/ncm2-tern
 	url = https://github.com/ncm2/ncm2-tern
+	ignore=dirty
 [submodule "bundle/ncm2-html-subscope"]
 	path = bundle/ncm2-html-subscope
 	url = https://github.com/ncm2/ncm2-html-subscope
 [submodule "bundle/neco-syntax"]
 	path = bundle/neco-syntax
 	url = https://github.com/shougo/neco-syntax
+	ignore=dirty
 [submodule "bundle/ncm2-syntax"]
 	path = bundle/ncm2-syntax
 	url = https://github.com/ncm2/ncm2-syntax
+	ignore=dirty
 [submodule "bundle/async.vim"]
 	path = bundle/async.vim
 	url = https://github.com/prabirshrestha/async.vim
 [submodule "bundle/ncm2-cssomni"]
 	path = bundle/ncm2-cssomni
 	url = https://github.com/ncm2/ncm2-cssomni
+	ignore=dirty
