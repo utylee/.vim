@@ -62,9 +62,6 @@
 [submodule "bundle/vim-toml"]
 	path = bundle/vim-toml
 	url = https://github.com/cespare/vim-toml
-[submodule "bundle/deoplete.nvim"]
-	path = bundle/deoplete.nvim
-	url = https://github.com/Shougo/deoplete.nvim
 [submodule "bundle/vim-hug-neovim-rpc"]
 	path = bundle/vim-hug-neovim-rpc
 	url = https://github.com/roxma/vim-hug-neovim-rpc
@@ -77,9 +74,6 @@
 [submodule "bundle/ncm2"]
 	path = bundle/ncm2
 	url = https://github.com/ncm2/ncm2
-[submodule "bundle/ncm2-jedi"]
-	path = bundle/ncm2-jedi
-	url = https://github.com/ncm2/ncm2-jedi
 [submodule "bundle/ncm2-path"]
 	path = bundle/ncm2-path
 	url = https://github.com/ncm2/ncm2-path
@@ -107,3 +101,15 @@
 [submodule "bundle/ncm2-html-subscope"]
 	path = bundle/ncm2-html-subscope
 	url = https://github.com/ncm2/ncm2-html-subscope
+[submodule "bundle/neco-syntax"]
+	path = bundle/neco-syntax
+	url = https://github.com/shougo/neco-syntax
+[submodule "bundle/ncm2-syntax"]
+	path = bundle/ncm2-syntax
+	url = https://github.com/ncm2/ncm2-syntax
+[submodule "bundle/async.vim"]
+	path = bundle/async.vim
+	url = https://github.com/prabirshrestha/async.vim
+[submodule "bundle/ncm2-cssomni"]
+	path = bundle/ncm2-cssomni
+	url = https://github.com/ncm2/ncm2-cssomni
