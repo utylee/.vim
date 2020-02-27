@@ -117,3 +117,6 @@
 	path = bundle/ncm2-cssomni
 	url = https://github.com/ncm2/ncm2-cssomni
 	ignore=dirty
+[submodule "bundle/ncm2-racer"]
+	path = bundle/ncm2-racer
+	url = https://github.com/ncm2/ncm2-racer
