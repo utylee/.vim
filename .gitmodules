@@ -117,6 +117,7 @@
 	path = bundle/ncm2-cssomni
 	url = https://github.com/ncm2/ncm2-cssomni
 	ignore=dirty
+<<<<<<< HEAD
 [submodule "bundle/ncm2-jedi"]
 	path = bundle/ncm2-jedi
 	url = https://github.com/ncm2/ncm2-jedi
@@ -138,3 +139,14 @@
 [submodule "bundle/coc.nvim"]
 	path = bundle/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
+=======
+[submodule "bundle/ncm2-racer"]
+	path = bundle/ncm2-racer
+	url = https://github.com/ncm2/ncm2-racer
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "bundle/ncm2-jedi"]
+	path = bundle/ncm2-jedi
+	url = https://github.com/ncm2/ncm2-jedi
+>>>>>>> 516cb70e18e0b4d925627adae20c4805995a0f70
