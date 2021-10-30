@@ -12,6 +12,10 @@ endif
 
 let colors_name="solarized_sd_utylee"
 
+hi Conditional guifg=#839496 guibg=#002b36 gui=NONE
+hi Keyword guifg=#dc322f guibg=NONE gui=NONE
+hi Label guifg=#839496 guibg=#002b36 gui=NONE
+
 hi Normal guifg=#839496 guibg=#002b36 gui=NONE
 hi Comment guifg=#586e75 guibg=NONE gui=NONE,italic cterm=italic
 hi Constant guifg=#2aa198 guibg=NONE gui=NONE

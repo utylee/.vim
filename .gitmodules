@@ -123,6 +123,3 @@
 [submodule "bundle/coc.nvim"]
 	path = bundle/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
-[submodule "bundle/vim-fish"]
-	path = bundle/vim-fish
-	url = https://github.com/dag/vim-fish
