@@ -1,10 +1,3 @@
-[submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
-	url = https://github.com/bling/vim-airline
-	ignore = dirty
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = http://github.com/scrooloose/nerdtree
 [submodule "bundle/vim-vinegar"]
 	path = bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar
@@ -18,19 +11,9 @@
 [submodule "bundle/vim-unimpaired"]
 	path = bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
-[submodule "bundle/vim-virtualenv"]
-	path = bundle/vim-virtualenv
-	url = https://github.com/jmcantrell/vim-virtualenv.git
 [submodule "bundle/vim-tmux-navigator"]
 	path = bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
-[submodule "bundle/ctrlp.vim"]
-	path = bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim
-[submodule "bundle/vim-airline-themes"]
-	path = bundle/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
-	ignore = dirty
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim
@@ -117,9 +100,12 @@
 	path = bundle/ncm2-cssomni
 	url = https://github.com/ncm2/ncm2-cssomni
 	ignore=dirty
-[submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
 [submodule "bundle/coc.nvim"]
 	path = bundle/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
+[submodule "bundle/vim-crystalline"]
+	path = bundle/vim-crystalline
+	url = https://github.com/rbong/vim-crystalline
+[submodule "bundle/vim-signify"]
+	path = bundle/vim-signify
+	url = https://github.com/mhinz/vim-signify
