@@ -103,9 +103,6 @@
 [submodule "bundle/vim-crystalline"]
 	path = bundle/vim-crystalline
 	url = https://github.com/rbong/vim-crystalline
-[submodule "bundle/vim-signify"]
-	path = bundle/vim-signify
-	url = https://github.com/mhinz/vim-signify
 [submodule "bundle/vim-startuptime"]
 	path = bundle/vim-startuptime
 	url = https://github.com/dstein64/vim-startuptime
