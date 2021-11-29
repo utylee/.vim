@@ -99,3 +99,6 @@
 [submodule "pack/bundle/start/vim-vinegar"]
 	path = pack/bundle/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar
+[submodule "pack/bundle/start/vim-jsx-pretty"]
+	path = pack/bundle/start/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty
