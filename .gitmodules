@@ -1,56 +1,9 @@
-[submodule "bundle/vim-vinegar"]
-	path = bundle/vim-vinegar
-	url = https://github.com/tpope/vim-vinegar
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule "bundle/vim-simple-todo"]
-	path = bundle/vim-simple-todo
-	url = https://github.com/vitalk/vim-simple-todo.git
-	ignore = dirty
-[submodule "bundle/vim-unimpaired"]
-	path = bundle/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired
-[submodule "bundle/vim-tmux-navigator"]
-	path = bundle/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
-[submodule "bundle/emmet-vim"]
-	path = bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim
-	ignore=dirty
-[submodule "bundle/vim-obsession"]
-	path = bundle/vim-obsession
-	url = https://github.com/tpope/vim-obsession.git
-[submodule "bundle/vim-prosession"]
-	path = bundle/vim-prosession
-	url = https://github.com/dhruvasagar/vim-prosession.git
-[submodule "bundle/vim-rooter"]
-	path = bundle/vim-rooter
-	url = https://github.com/airblade/vim-rooter
-[submodule "bundle/vim-arduino"]
-	path = bundle/vim-arduino
-	url = https://github.com/stevearc/vim-arduino
-	ignore = dirty
-[submodule "bundle/vim-gutentags"]
-	path = bundle/vim-gutentags
-	url = https://github.com/ludovicchabant/vim-gutentags.git
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
-	url = https://github.com/majutsushi/tagbar
-	ignore = dirty
-[submodule "bundle/fzf.vim"]
-	path = bundle/fzf.vim
-	url = https://github.com/junegunn/fzf.vim
-	ignore = dirty
 [submodule "bundle/vim-hug-neovim-rpc"]
 	path = bundle/vim-hug-neovim-rpc
 	url = https://github.com/roxma/vim-hug-neovim-rpc
 [submodule "bundle/nvim-yarp"]
 	path = bundle/nvim-yarp
 	url = https://github.com/roxma/nvim-yarp
-[submodule "bundle/rust.vim"]
-	path = bundle/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
 [submodule "bundle/ncm2"]
 	path = bundle/ncm2
 	url = https://github.com/ncm2/ncm2
@@ -97,12 +50,52 @@
 	path = bundle/ncm2-cssomni
 	url = https://github.com/ncm2/ncm2-cssomni
 	ignore=dirty
-[submodule "bundle/coc.nvim"]
-	path = bundle/coc.nvim
+[submodule "pack/bundle/start/coc.nvim"]
+	path = pack/bundle/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
-[submodule "bundle/vim-crystalline"]
-	path = bundle/vim-crystalline
+	branch = release
+[submodule "pack/bundle/start/fzf.vim"]
+	path = pack/bundle/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "pack/bundle/start/rust.vim"]
+	path = pack/bundle/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
+[submodule "pack/bundle/start/tagbar"]
+	path = pack/bundle/start/tagbar
+	url = https://github.com/preservim/tagbar
+[submodule "pack/bundle/start/vim-arduino"]
+	path = pack/bundle/start/vim-arduino
+	url = https://github.com/stevearc/vim-arduino
+[submodule "pack/bundle/start/vim-crystalline"]
+	path = pack/bundle/start/vim-crystalline
 	url = https://github.com/rbong/vim-crystalline
-[submodule "bundle/vim-startuptime"]
-	path = bundle/vim-startuptime
+[submodule "pack/bundle/start/vim-fugitive"]
+	path = pack/bundle/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "pack/bundle/start/vim-gutentags"]
+	path = pack/bundle/start/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule "pack/bundle/start/vim-obsession"]
+	path = pack/bundle/start/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git
+[submodule "pack/bundle/start/vim-prosession"]
+	path = pack/bundle/start/vim-prosession
+	url = https://github.com/dhruvasagar/vim-prosession.git
+[submodule "pack/bundle/start/vim-rooter"]
+	path = pack/bundle/start/vim-rooter
+	url = https://github.com/airblade/vim-rooter
+[submodule "pack/bundle/start/vim-simple-todo"]
+	path = pack/bundle/start/vim-simple-todo
+	url = https://github.com/vitalk/vim-simple-todo.git
+[submodule "pack/bundle/start/vim-startuptime"]
+	path = pack/bundle/start/vim-startuptime
 	url = https://github.com/dstein64/vim-startuptime
+[submodule "pack/bundle/start/vim-tmux-navigator"]
+	path = pack/bundle/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "pack/bundle/start/vim-unimpaired"]
+	path = pack/bundle/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+[submodule "pack/bundle/start/vim-vinegar"]
+	path = pack/bundle/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
