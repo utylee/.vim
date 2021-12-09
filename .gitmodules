@@ -102,3 +102,6 @@
 [submodule "pack/bundle/start/vim-jsx-pretty"]
 	path = pack/bundle/start/vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty
+[submodule "pack/bundle/start/vim-commentary"]
+	path = pack/bundle/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
