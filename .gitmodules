@@ -105,3 +105,9 @@
 [submodule "pack/bundle/start/vim-commentary"]
 	path = pack/bundle/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule "pack/bundle/start/emmet-vim"]
+	path = pack/bundle/start/emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule "pack/bundle/start/vim-closetag"]
+	path = pack/bundle/start/vim-closetag
+	url = https://github.com/alvan/vim-closetag
