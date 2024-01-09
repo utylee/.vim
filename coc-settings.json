@@ -1,6 +1,8 @@
 {
   "coc.source.file.ignoreHidden": false,
   "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "json"],
+  "typescript.format.enable": false,
+  "javascript.format.enable": false,
   "suggest.insertMode": "insert",
   "python.formatting.provider": "autopep8",
   "python.formatting.autopep8Args": ["--max-line-length=82"]
