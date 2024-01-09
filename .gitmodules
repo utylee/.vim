@@ -111,3 +111,9 @@
 [submodule "pack/bundle/start/vim-closetag"]
 	path = pack/bundle/start/vim-closetag
 	url = https://github.com/alvan/vim-closetag
+[submodule "pack/bundle/start/vim-surround"]
+	path = pack/bundle/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "pack/bundle/start/ctrlp.vim"]
+	path = pack/bundle/start/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
