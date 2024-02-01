@@ -117,3 +117,6 @@
 [submodule "pack/bundle/start/ctrlp.vim"]
 	path = pack/bundle/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
+[submodule "pack/bundle/start/gutentags_plus"]
+	path = pack/bundle/start/gutentags_plus
+	url = https://github.com/skywind3000/gutentags_plus
