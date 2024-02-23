@@ -90,9 +90,6 @@
 [submodule "pack/bundle/start/vim-startuptime"]
 	path = pack/bundle/start/vim-startuptime
 	url = https://github.com/dstein64/vim-startuptime
-[submodule "pack/bundle/start/vim-tmux-navigator"]
-	path = pack/bundle/start/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "pack/bundle/start/vim-unimpaired"]
 	path = pack/bundle/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
