@@ -1,55 +1,3 @@
-[submodule "bundle/vim-hug-neovim-rpc"]
-	path = bundle/vim-hug-neovim-rpc
-	url = https://github.com/roxma/vim-hug-neovim-rpc
-[submodule "bundle/nvim-yarp"]
-	path = bundle/nvim-yarp
-	url = https://github.com/roxma/nvim-yarp
-[submodule "bundle/ncm2"]
-	path = bundle/ncm2
-	url = https://github.com/ncm2/ncm2
-	ignore=dirty
-[submodule "bundle/ncm2-path"]
-	path = bundle/ncm2-path
-	url = https://github.com/ncm2/ncm2-path
-	ignore=dirty
-[submodule "bundle/ncm2-tagprefix"]
-	path = bundle/ncm2-tagprefix
-	url = https://github.com/ncm2/ncm2-tagprefix
-[submodule "bundle/ncm2-bufword"]
-	path = bundle/ncm2-bufword
-	url = https://github.com/ncm2/ncm2-bufword
-[submodule "bundle/ncm2-otherbuf"]
-	path = bundle/ncm2-otherbuf
-	url = https://github.com/fgrsnau/ncm2-otherbuf
-	ignore=dirty
-[submodule "bundle/vim-lsp"]
-	path = bundle/vim-lsp
-	url = https://github.com/prabirshrestha/vim-lsp
-[submodule "bundle/ncm2-vim-lsp"]
-	path = bundle/ncm2-vim-lsp
-	url = https://github.com/ncm2/ncm2-vim-lsp
-[submodule "bundle/ncm2-tern"]
-	path = bundle/ncm2-tern
-	url = https://github.com/ncm2/ncm2-tern
-	ignore=dirty
-[submodule "bundle/ncm2-html-subscope"]
-	path = bundle/ncm2-html-subscope
-	url = https://github.com/ncm2/ncm2-html-subscope
-[submodule "bundle/neco-syntax"]
-	path = bundle/neco-syntax
-	url = https://github.com/shougo/neco-syntax
-	ignore=dirty
-[submodule "bundle/ncm2-syntax"]
-	path = bundle/ncm2-syntax
-	url = https://github.com/ncm2/ncm2-syntax
-	ignore=dirty
-[submodule "bundle/async.vim"]
-	path = bundle/async.vim
-	url = https://github.com/prabirshrestha/async.vim
-[submodule "bundle/ncm2-cssomni"]
-	path = bundle/ncm2-cssomni
-	url = https://github.com/ncm2/ncm2-cssomni
-	ignore=dirty
 [submodule "pack/bundle/start/coc.nvim"]
 	path = pack/bundle/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
@@ -90,9 +38,6 @@
 [submodule "pack/bundle/start/vim-startuptime"]
 	path = pack/bundle/start/vim-startuptime
 	url = https://github.com/dstein64/vim-startuptime
-[submodule "pack/bundle/start/vim-tmux-navigator"]
-	path = pack/bundle/start/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "pack/bundle/start/vim-unimpaired"]
 	path = pack/bundle/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
@@ -117,3 +62,12 @@
 [submodule "pack/bundle/start/ctrlp.vim"]
 	path = pack/bundle/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
+[submodule "pack/bundle/start/dart-vim-plugin"]
+	path = pack/bundle/start/dart-vim-plugin
+	url = https://github.com/dart-lang/dart-vim-plugin
+[submodule "pack/bundle/start/ultisnips"]
+	path = pack/bundle/start/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "pack/bundle/start/dartlang-snippets"]
+	path = pack/bundle/start/dartlang-snippets
+	url = https://github.com/natebosch/dartlang-snippets

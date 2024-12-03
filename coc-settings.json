@@ -5,5 +5,40 @@
   "javascript.format.enable": false,
   "suggest.insertMode": "insert",
   "python.formatting.provider": "autopep8",
-  "python.formatting.autopep8Args": ["--max-line-length=82"]
+  "python.formatting.autopep8Args": ["--max-line-length=82"],
+
+  "languageserver": {
+    "dart": {
+      "command": "dart",
+      "args": [
+        "/usr/local/dart-sdk/bin/snapshots/analysis_server.dart.snapshot",
+        "--lsp",
+        "--client-id",
+        "vim",
+        "--client-version",
+        "coc.nvim"
+      ],
+      "filetypes": ["dart"],
+      "trace.server": "verbose"
+    },
+
+    "arduino": {
+      "command": "/usr/local/bin/arduino-language-server",
+      "rootPatterns": ["*.ino"],
+      "filetypes": ["arduino"],
+      "args": [
+        "-cli",
+        "/usr/local/bin/arduino-cli",
+        "-clangd",
+        "/usr/local/clang+llvm-12.0.1-x86_64-linux-gnu-ubuntu-16.04/bin/clangd",
+        "-cli-config",
+        "/home/utylee/.arduino15/arduino-cli.yaml",
+        "-fqbn",
+        "esp8266:esp8266:nodemcuv2",
+        "-format-conf-path",
+        "/home/utylee/.clang-format"
+      ],
+      "disabledFeatures": ["semanticTokens"]
+    }
+  }
 }
